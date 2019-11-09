@@ -1,0 +1,140 @@
+.SignUp {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.SignUp .Cancel {
+    position: relative;
+    float: left;
+    margin: 1em;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.SignUp .Cancel::before, .SignUp .Cancel::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    height: 3px;
+    background: #AFB2B5;
+}
+
+.SignUp .Cancel::before {
+    transform: rotate(45deg);
+}
+
+.SignUp .Cancel::after {
+    transform: rotate(-45deg);
+}
+
+.SignUp .ProgressBar {
+    position: relative;
+    margin: auto;
+    height: 1em;
+    width: 100%;
+}
+
+.SignUp .ProgressBar .Background {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 0.7em solid #EBF6FE;
+    margin: 4em 0;
+    padding: 0;
+}
+
+.SignUp .ProgressBar .Progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0.7em;
+    width: 13%;
+    background: #0089FF;
+    transform-origin: 0 0;
+    opacity: 100;
+    transition: all 0.15s ease;
+}
+
+.SignUp .ProgressBar .Progress.Hide {
+    opacity: 0;
+}
+
+.FirstNameForm {
+    text-align: left;
+    margin: auto;
+    margin-top: 5em;
+    width: 70%;
+}
+
+.FirstNameForm .Header {
+    font-size: 2.6em;
+    font-weight: 700;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+}
+
+.FirstNameForm .Label {
+    position: relative;
+    margin: auto;
+    width: 100%;
+}
+
+.FirstNameForm .InputLabel {
+    font-size: 0.8em;
+    font-weight: 700;
+    color: #AFB2B5;
+}
+
+.FirstNameForm .InputBorder {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #0089FF;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition: all 0.15s ease;
+}
+
+.FirstNameForm .InputText {
+    -webkit-appearance: none;
+    width: 100%;
+    border: 0;
+    font-family: inherit;
+    vertical-align: bottom;
+    margin-top: 2em;
+    font-size: 1.2em;
+    font-weight: 500;
+    border-bottom: 3px solid #AFB2B5;
+    background: none;
+    border-radius: 0;
+    color: #AFB2B5;
+}
+
+.FirstNameForm .InputText:focus {
+    background: none;
+    outline: none;
+}
+
+.FirstNameForm .InputText:focus+span {
+    transform: scale(1);
+}
+
+.FirstNameForm input[type=submit] {
+    outline: none;
+    position: absolute;
+    bottom: 50px;
+    background: none;
+    color: #0089FF;
+    width: 70%;
+    font-size: 1.4em;
+    font-weight: 600;
+    border: 2px solid #0089FF;
+    border-radius: 0.5em;
+}
+
+/* https://freefrontend.com/css-input-text/ */
