@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 
-.SignUp .Cancel {
+.Cancel {
     position: relative;
     float: left;
     margin: 1em;
@@ -12,7 +12,7 @@
     overflow: hidden;
 }
 
-.SignUp .Cancel::before, .SignUp .Cancel::after {
+.Cancel::before, .Cancel::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -22,73 +22,108 @@
     background: #AFB2B5;
 }
 
-.SignUp .Cancel::before {
+.Cancel::before {
     transform: rotate(45deg);
 }
 
-.SignUp .Cancel::after {
+.Cancel::after {
     transform: rotate(-45deg);
 }
 
-.SignUp .ProgressBar {
+.ProgressBar {
     position: relative;
-    margin: auto;
     height: 1em;
     width: 100%;
 }
 
-.SignUp .ProgressBar .Background {
+.ProgressBarBack {
     display: block;
     height: 1px;
     border: 0;
     border-top: 0.7em solid #EBF6FE;
-    margin: 4em 0;
+    margin: 3em 0;
     padding: 0;
 }
 
-.SignUp .ProgressBar .Progress {
+.ProgressBarMover {
     position: absolute;
     top: 0;
     left: 0;
     height: 0.7em;
-    width: 13%;
+    width: 15%;
     background: #0089FF;
     transform-origin: 0 0;
     opacity: 100;
-    transition: all 0.15s ease;
+    transition: all 0.3s ease;
 }
 
-.SignUp .ProgressBar .Progress.Hide {
-    opacity: 0;
-}
-
-.FirstNameForm {
+.Container {
+    position: relative;
     text-align: left;
     margin: auto;
-    margin-top: 5em;
     width: 70%;
 }
 
-.FirstNameForm .Header {
-    font-size: 2.6em;
+.SignUpForm {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.Form {
+    opacity: 100;
+    transition: opacity 0.3s ease;
+}
+
+.Form.Hide {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.HeaderNormal {
+    font-size: 2.7em;
     font-weight: 700;
-    margin-top: 0.4em;
+    margin-top: 2em;
     margin-bottom: 0.4em;
 }
 
-.FirstNameForm .Label {
+.HeaderSmall {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-top: 2em;
+    margin-bottom: 0.4em;
+}
+
+.HeaderSmallMargin {
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-top: 2em;
+    margin-bottom: 0.2em;
+}
+
+.SubHeader {
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: #AFB2B5;
+    transition: all 0.4s ease;
+}
+
+.Label {
     position: relative;
     margin: auto;
     width: 100%;
 }
 
-.FirstNameForm .InputLabel {
+.InputLabel {
     font-size: 0.8em;
     font-weight: 700;
     color: #AFB2B5;
+    transition: all 0.4s ease;
 }
 
-.FirstNameForm .InputBorder {
+.InputBorder {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -100,7 +135,7 @@
     transition: all 0.15s ease;
 }
 
-.FirstNameForm .InputText {
+.InputText {
     -webkit-appearance: none;
     width: 100%;
     border: 0;
@@ -113,20 +148,41 @@
     background: none;
     border-radius: 0;
     color: #AFB2B5;
+    transition: all 0.4s ease;
 }
 
-.FirstNameForm .InputText:focus {
+.InputText:focus {
     background: none;
     outline: none;
 }
 
-.FirstNameForm .InputText:focus+span {
+.InputText:focus+span {
     transform: scale(1);
 }
 
-.FirstNameForm input[type=submit] {
+.Option {
+    text-align: center;
+    width: 100%;
+    font-size: 22px;
+}
+
+.Option input {
+    display: none;
+}
+
+.Option .CheckMark {
+    font-weight: 600;
+    width: 92%;
+    padding: 4%;
+    margin-top: 0.3em;
+    border: 1px solid;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.Submit {
     outline: none;
-    position: absolute;
+    position: fixed;
     bottom: 50px;
     background: none;
     color: #0089FF;
